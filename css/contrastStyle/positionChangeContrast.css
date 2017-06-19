@@ -218,7 +218,8 @@ ul li.fgb-color{
     font-size: 0.3rem;
     margin-top:0.32rem;
     text-align: center;
-    background:red; 
+    background:url("../../img/positionChangeContrast/colorBorder.png") no-repeat;
+    background-size: 100%;
  /*   border: 1px solid #E66440;*/
     color: #6e6e6e;
 /*    padding-left:0.56rem;*/
