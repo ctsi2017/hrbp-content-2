@@ -31,13 +31,13 @@
 .addAreaList ul{
     font-size: 0.22rem;
     color: #666;
-    margin-left:-0.09rem;
+  /*  margin-left:-0.09rem;*/
 }
 .whiteBg{
     background: #fff;
-    width: 6.10rem;
+    width: 6.30rem;
     height: auto;
-    padding: 0rem 0.7rem 0.43rem;
+    padding: 0rem 0.6rem 0.43rem;
     z-index: 3;
     overflow: hidden;
 }
@@ -90,14 +90,14 @@
     /*    margin-right: 0.4rem;*/
     /*margin-left: 0.3rem;*/
     background:#fff;
-    width:  2.54rem;
+    width:  2.8rem;
     height: 0.48rem;
     position: relative;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     background:url("../../img/positionChangeContrast/line.png") no-repeat ;
-    background-size:98%;
+    background-size:100%;
 }
 /*.selectAreaList ul li:after,.addAreaList ul li:after ,.slide-dl ul li:after{*/
     /*width: 200%;*/
@@ -154,12 +154,12 @@ ul li.fgb-color{
 }
 /*已选维度样式*/
 .slide-dl .selectAreaList ul .selectedList,.addAreaList ul .currentChoose,.addAreaList ul .selectedList{
-    background: #E66440;
+ /*   background: #E66440;*/
     color:#fff;
     border:none;
     position: relative;
     background:url("../../img/positionChangeContrast/colorLine.png") no-repeat ;
-    background-size:98%;
+    background-size:100%;
 }
 /*.slide-dl .selectAreaList ul .selectedList:after ,.addAreaList ul .currentChoose:after ,.addAreaList ul .selectedList:after{*/
     /*content: '';*/
@@ -203,22 +203,25 @@ ul li.fgb-color{
 
 }
 .slide-dl .marginLeft{
-    margin-left: 0.98rem;
+    /*margin-left: 0.98rem;*/
+    float: right;
 }
 .slide-dl .multiSelect li:nth-child(2n){
-    width: 2.5rem;
+    width: 2.8rem;
 }
 .fl{float: left}
 .fr{float: right}
 .styled-select {
-    width: 1.98rem;
-    height: 0.47rem;
+    width: 2.8rem;
+    height: 0.48rem;
     float: left;
     font-size: 0.3rem;
     margin-top:0.32rem;
-    border: 1px solid #E66440;
+    text-align: center;
+    background:red; 
+ /*   border: 1px solid #E66440;*/
     color: #6e6e6e;
-    padding-left:0.56rem;
+/*    padding-left:0.56rem;*/
     line-height:0.47rem;
 }
 .styled-select span{
@@ -342,13 +345,13 @@ li.selectedList{
     background-color: rgb(235, 235, 228);
 }
 .multiSelect{
-    margin-left:-0.24rem;
+   /* margin-left:-0.24rem;*/
     overflow: hidden;
 }
 
 #selectLeftArea .whiteBg ,#selectRightArea .whiteBg{
-    margin-left:-0.1rem;
-    width:6.2rem;
+   /* margin-left:-0.1rem;*/
+    width:6.3rem;
 }
 
 #selectLeftArea .whiteBg li:nth-child(2n),#selectRightArea .whiteBg li:nth-child(2n){

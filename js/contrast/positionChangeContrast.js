@@ -8,6 +8,7 @@ function positionChangeContrast() {
     var getSite = getItem("getArea"); //默认区域
     var getPost = getItem("getPost"); //默认岗位
     var getTime = getItem("getDate"); //默认时间
+    alert(getTime);
     var fiveCode = getTime.substring(4,5);
     if(fiveCode !="."){
         getTime = getTime.substring(0,4)+"."+getTime.substring(4,getTime.length);
