@@ -162,7 +162,7 @@ function liGangContrast() {
     });
 
 //多维度取消选择
-    $(".addAreaList ul").on("touchend", "li", function () {
+    $(".addAreaList ul").on("click", "li", function () {
         var selectedLength = $(".addAreaList ul .selectedList").length;
         if ($(this).hasClass('selectedList')) {
             $(this).removeClass('selectedList');
@@ -180,7 +180,7 @@ function liGangContrast() {
             }
         }
     });
-    $(".addAreaList ul").on("touchend","li.disabled",function(){
+    $(".addAreaList ul").on("click","li.disabled",function(){
         $(this).removeClass('selectedList');
     });
 
@@ -263,21 +263,21 @@ function liGangContrast() {
     var whiteBg = document.querySelector(".whiteBg");
     var selectLeftArea = document.querySelector("#selectLeftArea");
     var selectRightArea = document.querySelector("#selectRightArea");
-    whiteBg.addEventListener('touchend', function (e) {
+    whiteBg.addEventListener('click', function (e) {
         e.stopPropagation();
     });
-    addAreaList.addEventListener('touchend', function (e) {
+    addAreaList.addEventListener('click', function (e) {
         $(this).css("display", "none");
         $('.addAreaList ul li').removeClass('selectedList');
         num = 0;
         $(".addContrast .icon-shangla").removeClass("icon-shangla").addClass("icon-xiala");
     });
-    selectLeftArea.addEventListener('touchend', function (e) {
+    selectLeftArea.addEventListener('click', function (e) {
         $(this).css("display", "none");
         num = 0;
         $("#leftSelect .icon-shangla").removeClass("icon-shangla").addClass("icon-xiala");
     });
-    selectRightArea.addEventListener('touchend', function (e) {
+    selectRightArea.addEventListener('click', function (e) {
         $(this).css("display", "none");
         num = 0;
         $("#rightSelect .icon-shangla").removeClass("icon-shangla").addClass("icon-xiala");
