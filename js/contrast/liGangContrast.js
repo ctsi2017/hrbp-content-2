@@ -162,7 +162,7 @@ function liGangContrast() {
     });
 
 //多维度取消选择
-    $(".addAreaList ul").on("click", "li", function () {
+    $(".addAreaList ul").on("touchend", "li", function () {
         var selectedLength = $(".addAreaList ul .selectedList").length;
         if ($(this).hasClass('selectedList')) {
             $(this).removeClass('selectedList');
@@ -180,7 +180,7 @@ function liGangContrast() {
             }
         }
     });
-    $(".addAreaList ul").on("click","li.disabled",function(){
+    $(".addAreaList ul").on("touchend","li.disabled",function(){
         $(this).removeClass('selectedList');
     });
 
