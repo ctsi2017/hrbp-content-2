@@ -1217,7 +1217,7 @@ function setItem(key, value) {
     if (checkAndroid()) {
         window.getDataFromNative.setItem(key, value);
     } else {
-        window.localStorage.setItem(key, value);
+        localStorage.setItem(key, value);
     }
 
 }
@@ -1227,7 +1227,7 @@ function getItem(key) {
     if (checkAndroid()) {
         return window.getDataFromNative.getItem(key);
     } else {
-        return window.localStorage.getItem(key);
+        return localStorage.getItem(key);
     }
 
 }
@@ -1235,9 +1235,9 @@ function getItem(key) {
 function clear(key) {
 
     if (checkAndroid()) {
-        window.getDataFromNative.clear();
+        window.getDataFromNative.clear(key);
     } else {
-        window.localStorage.clear();
+        localStorage.clear(key);
     }
 
 }
@@ -1246,7 +1246,7 @@ function removeItem(key) {
     if (checkAndroid()) {
         window.getDataFromNative.removeItem(key);
     } else {
-        window.localStorage.removeItem(key);
+        localStorage.removeItem(key);
     }
 
 }
