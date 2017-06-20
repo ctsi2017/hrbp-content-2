@@ -1218,6 +1218,7 @@ function setItem(key, value) {
         window.getDataFromNative.setItem(key, value);
     } else {
         localStorage.setItem(key, value);
+        alert(localStorage.getItem(key));
     }
 
 }
