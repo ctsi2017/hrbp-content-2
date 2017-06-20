@@ -44,13 +44,13 @@ function cbEmpWorkEfficiencyPercentage(json) {
             if (item.assessment === '勤奋') {
                 data2 = substringChar(item.proportion);
             }
-            if (item.assessment === '慵懒') {
+            if (item.assessment === '普通') {
                 data3 = substringChar(item.proportion);
             }
             if (item.assessment === '低效') {
                 data4 = substringChar(item.proportion);
             }
-            if (item.assessment === '普通') {
+            if (item.assessment === '慵懒') {
                 data5 = substringChar(item.proportion);
             }
         });
