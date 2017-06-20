@@ -15,7 +15,8 @@ var CTSI_API_JSON;
 // var NORM_ZENGGANGCONTRAST_URL = '/hrbp-content-1/view/norm/zengGangContrast.html';
 // var POTENCY_TASKPERFORMCONTRAST_URL = '/hrbp-content-1/view/potency/taskPerformContrast.html';
 
-var CONTRAST_HTMLDOMAIN = 'http://www.ixiaoru.com';
+// var CONTRAST_HTMLDOMAIN = 'http://www.ixiaoru.com';
+var CONTRAST_HTMLDOMAIN = 'http://123.207.219.95:10086';
 var ANALY_POSITIONCHANGECONTRAST_URL = '/hrbp-content-2/view/analy/positionChangeContrast.html';
 var ANALY_ZAIGANGABNORMAL_URL = '/hrbp-content-2/view/analy/zaiGangAbnormal.html';
 var NORM_LIGANGCONTRAST_URL = '/hrbp-content-2/view/norm/liGangContrast.html';
