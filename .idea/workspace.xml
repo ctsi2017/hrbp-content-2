@@ -3,7 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="7a674b71-8cd0-498a-8823-be78fd90beac" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/api/api.common.js" afterPath="$PROJECT_DIR$/js/api/api.common.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/analy/flowAnaly.html" afterPath="$PROJECT_DIR$/view/analy/flowAnaly.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/view/norm/norm.html" afterPath="$PROJECT_DIR$/view/norm/norm.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -44,8 +45,18 @@
       <file leaf-file-name="flowAnaly.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/view/analy/flowAnaly.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="21">
+              <caret line="61" column="24" lean-forward="false" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="norm.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/view/norm/norm.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="55" column="33" lean-forward="true" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -91,7 +102,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="api.common.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.common.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/api/api.common.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="378">
@@ -132,6 +143,8 @@
         <option value="$PROJECT_DIR$/view/norm/normIncrease.html" />
         <option value="$PROJECT_DIR$/js/common/common.js" />
         <option value="$PROJECT_DIR$/js/api/api.common.js" />
+        <option value="$PROJECT_DIR$/view/analy/flowAnaly.html" />
+        <option value="$PROJECT_DIR$/view/norm/norm.html" />
       </list>
     </option>
   </component>
@@ -177,6 +190,56 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="hrbp-content-2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrbp-content-2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrbp-content-2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrbp-content-2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrbp-content-2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="norm" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrbp-content-2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="hrbp-content-2" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="view" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="analy" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -326,7 +389,7 @@
       <workItem from="1497849138677" duration="1983000" />
       <workItem from="1497919704123" duration="11617000" />
       <workItem from="1497939301005" duration="2181000" />
-      <workItem from="1497948915434" duration="2151000" />
+      <workItem from="1497948915434" duration="2395000" />
     </task>
     <task id="LOCAL-00001" summary="修改对比">
       <created>1497859689181</created>
@@ -454,11 +517,18 @@
       <option name="project" value="LOCAL" />
       <updated>1497951366385</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="修改端口&#10;">
+      <created>1497952135158</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1497952135158</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="18684000" />
+    <option name="totallyTimeSpent" value="18928000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
@@ -500,7 +570,8 @@
     <MESSAGE value="修改工作效能图工作时长和工作业绩" />
     <MESSAGE value="修改二级页面样式" />
     <MESSAGE value="alert弹窗locahost" />
-    <option name="LAST_COMMIT_MESSAGE" value="alert弹窗locahost" />
+    <MESSAGE value="修改端口&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="修改端口&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -689,6 +760,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="231">
           <caret line="71" column="22" lean-forward="true" selection-start-line="71" selection-start-column="22" selection-end-line="71" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -778,14 +850,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/view/analy/flowAnaly.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/normstyle/norm.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-315">
@@ -836,6 +900,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="18" column="53" lean-forward="true" selection-start-line="18" selection-start-column="53" selection-end-line="18" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/analy/flowAnaly.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="21">
+          <caret line="61" column="24" lean-forward="false" selection-start-line="61" selection-start-column="24" selection-end-line="61" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/view/norm/norm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="273">
+          <caret line="55" column="33" lean-forward="true" selection-start-line="55" selection-start-column="33" selection-end-line="55" selection-end-column="33" />
           <folding />
         </state>
       </provider>
