@@ -64,16 +64,23 @@ a {
 .base-header div .iconfont {
   font-weight: 600;
 }
-.base-header .base-lhead {
-  text-indent: 0.05rem;
-}
-.base-header .base-lhead s {
+.base-header div s {
   display: inline-block;
   width: 1.5rem;
   height: 100%;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.base-header .base-lhead {
+  text-align: center;
+}
+.base-header .base-lhead s {
+  float: left;
+  margin-left: 0.2rem;
+}
+.base-header .base-lhead span {
+  float: left;
 }
 .base-header .base-chead {
   text-align: center;

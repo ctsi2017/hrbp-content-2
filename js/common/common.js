@@ -670,7 +670,7 @@ function h_region(data, obj, callback) {
         }
     });
     setItem("getArea", leftval);
-    //这是点击右侧详细列表时的所获取的值，点击时需要响应的发送请求，回调函数
+    //这是点击右侧详细列表时的所获取的值，点击时需要响应的发送请求，回调函数 obj.rightDrop 代表右侧大盒子的类名
     $(".base-area-rightDrop").on("click", "p", function () {
         var index = $(this).index();
         $("." + obj.rightDrop + " p").eq(index).addClass("rightdropstyle").siblings().removeClass("rightdropstyle");

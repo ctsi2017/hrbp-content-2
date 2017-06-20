@@ -62,25 +62,24 @@ a {
 }
 .base-header div .iconfont {
   font-weight: 600;
+}
+.base-header div s {
   display: inline-block;
+  width: 1.5rem;
+  height: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .base-header .base-lhead {
   text-align: center;
 }
 .base-header .base-lhead s {
-  display: inline-block;
-  width: 1.5rem;
-  height: 100%;
-  overflow: hidden;
   float: left;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  margin-left: 0.2rem;
 }
-.base-header .base-lhead span{
+.base-header .base-lhead span {
   float: left;
-}
-.base-header .base-lhead base-iconone{
-  margin-top: -0.05rem;
 }
 .base-header .base-chead {
   text-align: center;
