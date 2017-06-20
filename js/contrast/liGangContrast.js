@@ -263,21 +263,21 @@ function liGangContrast() {
     var whiteBg = document.querySelector(".whiteBg");
     var selectLeftArea = document.querySelector("#selectLeftArea");
     var selectRightArea = document.querySelector("#selectRightArea");
-    whiteBg.addEventListener('click', function (e) {
+    whiteBg.addEventListener('touchend', function (e) {
         e.stopPropagation();
     });
-    addAreaList.addEventListener('click', function (e) {
+    addAreaList.addEventListener('touchend', function (e) {
         $(this).css("display", "none");
         $('.addAreaList ul li').removeClass('selectedList');
         num = 0;
         $(".addContrast .icon-shangla").removeClass("icon-shangla").addClass("icon-xiala");
     });
-    selectLeftArea.addEventListener('click', function (e) {
+    selectLeftArea.addEventListener('touchend', function (e) {
         $(this).css("display", "none");
         num = 0;
         $("#leftSelect .icon-shangla").removeClass("icon-shangla").addClass("icon-xiala");
     });
-    selectRightArea.addEventListener('click', function (e) {
+    selectRightArea.addEventListener('touchend', function (e) {
         $(this).css("display", "none");
         num = 0;
         $("#rightSelect .icon-shangla").removeClass("icon-shangla").addClass("icon-xiala");
