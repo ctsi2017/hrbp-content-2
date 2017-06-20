@@ -526,7 +526,7 @@ function quadrant(obj) {
             trigger: 'item',
             formatter: function(p){
                 console.log(p);
-                return "工作时长:"+(Number(p.data[0])+Number(xPoints))+",工作业绩:"+(Number(p.data[1])+Number(ypoint));
+                return "工作时长:"+(Number(p.data[0])+Number(xPoints))+"<br />工作业绩:"+(Number(p.data[1])+Number(ypoint));
                 //return p;
             }
         },
