@@ -79,7 +79,7 @@ function h_columar(obj) { //这是长方形柱状图
     option = {
         title: [
             {
-                subtext: '单位 ：%',
+                subtext: '单位 ：人',
                 x: "left",
                 y: "-18",
             },
@@ -210,7 +210,7 @@ function early_columar(obj) { //这是长方形柱状图
     option = {
         title: [
             {
-                subtext: '单位 ：%',
+                subtext: '单位 ：人',
                 x: "left",
                 y: "-18",
             },
