@@ -265,8 +265,7 @@ function early_columar(obj) { //这是长方形柱状图
             axisLabel: {
                 formatter: function(value, index) {
                     //return value + "\n\n" + data.barData[1].data[index] + "人";
-                    alert(obj.totNum);
-                    return value+"\n\n"+obj.totNum[index]+"人";
+                    return value+"\n\n"+obj.totNum[index];
                 },
                 textStyle: {
                     fontFamily: "微软雅黑",
@@ -294,6 +293,7 @@ function early_columar(obj) { //这是长方形柱状图
             type: 'bar',
             stack: '总量',
             barWidth: 14,
+            z: 10,
             itemStyle: {
                 normal: {
                     color: '#df5e39',
