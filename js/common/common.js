@@ -118,7 +118,6 @@ function h_columar(obj) { //这是长方形柱状图
             axisLabel: {
                 formatter: function(value, index) {
                     //return value + "\n\n" + data.barData[1].data[index] + "人";
-                    alert(obj.totNum);
                     return value+"\n\n"+obj.totNum[index];
                 },
                 textStyle: {
@@ -178,6 +177,7 @@ function h_columar(obj) { //这是长方形柱状图
 
                     }
                 },
+                barWidth: 14,
                 barGap: '-100%',
                 "data": [100,100,100,100,100]
 
