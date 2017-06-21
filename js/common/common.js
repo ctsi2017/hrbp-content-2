@@ -223,7 +223,9 @@ function early_columar(obj) { //这是长方形柱状图
         ],
         tooltip: {
             trigger: 'axis',
-            formatter: '{a} : {c}%'
+            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+            }
         },
         grid: [
             {x: '12%', y: '20%',width:'87%',height:"55%"},
@@ -300,27 +302,14 @@ function early_columar(obj) { //这是长方形柱状图
             {
                 "type": "bar",
                 "stack": "总量",
+                barWidth: 14,
                 "itemStyle": {
                     "normal": {
                         "color": "#3c424f",
-                        "barBorderRadius": 0,
-                        "label": {
-                            "show": obj.topshow || false,
-                            "position": "top",
-
-                        },
-
                     }
                 },
-                "data": function () {
-                    var arr = [];
-                    var num = 0;
-                    for (var i = 0; i < obj.data.length; i++) {
-                        num = 100 - obj.data[i];
-                        arr.push(num);
-                    }
-                    return arr;
-                }(),
+                barGap: '-100%',
+                "data": [100,100,100,100,100]
 
             }]
     };
