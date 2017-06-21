@@ -291,7 +291,6 @@ function early_columar(obj) { //这是长方形柱状图
         series: [{
             name: obj.nameone || "初始人数",
             type: 'bar',
-            stack: '总量',
             barWidth: 14,
             z: 10,
             itemStyle: {
