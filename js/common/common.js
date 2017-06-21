@@ -118,6 +118,7 @@ function h_columar(obj) { //这是长方形柱状图
             axisLabel: {
                 formatter: function(value, index) {
                     //return value + "\n\n" + data.barData[1].data[index] + "人";
+                    alert(obj.totNum);
                     return value+"\n\n"+obj.totNum[index]+"人";
                 },
                 textStyle: {
@@ -1305,7 +1306,6 @@ function setItem(key, value) {
         window.getDataFromNative.setItem(key, value);
     } else {
         localStorage.setItem(key, value);
-        alert(localStorage.getItem(key));
     }
 
 }
