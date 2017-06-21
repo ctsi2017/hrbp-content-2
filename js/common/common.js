@@ -328,7 +328,6 @@ function early_columar(obj) { //这是长方形柱状图
             {
                 name : "总人数",
                 "type": "bar",
-                "stack": "总量",
                 barWidth: 14,
                 "itemStyle": {
                     "normal": {
