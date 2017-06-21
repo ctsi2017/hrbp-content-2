@@ -296,6 +296,27 @@ function changeHColumarWarningValue(id, dataName, data, earlyLine, nameone) {
 }
 
 /**
+ * 柱状图-占比-离职识别分析.
+ *
+ * @param id
+ * @param nameone
+ * @param leftData
+ * @param rightData
+ * @param nametwo
+ */
+function changeHColumarLeave(id, leftData, rightData, nameone, nametwo,
+    dataname) {
+  leavecolumnar({
+    idname: id,
+    leftData: leftData,
+    rightData: rightData,
+    nameone: nameone,
+    nametwo: nametwo,
+    dataname: dataname
+  });
+}
+
+/**
  * 饼状图-4.
  *
  * @param v1 高.
@@ -880,15 +901,12 @@ function changeQuadrant(array, arr) {
  *
  * @param index 数值.
  * @param id id.
- * @param warningValue
+ * @param indexWarningValue 接口返回的指数预警值.
  */
-function checkIndexRedByIndex(index, id, warningValue) {
-  if (Number(index) < (warningValue === 0 ? INDEX_RED : warningValue)) {
+function checkIndexRedByIndex(index, id, indexWarningValue) {
+  if (Number(index) < (indexWarningValue === 0 ? INDEX_RED
+          : indexWarningValue)) {
     $('#' + id).css("color", '#e66440');
-  } else {
-    if (id === 'potency_index') { // 工作效能指数特殊处理
-      $('#' + id).css("color", '#343a46');
-    }
   }
 }
 
