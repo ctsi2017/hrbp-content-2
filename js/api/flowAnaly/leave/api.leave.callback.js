@@ -37,13 +37,18 @@ function cbEmpDimissionInclination(json) {
   json = JsonParse(json);
   if (checkCallBackJsonIsNotNull(json) && checkJsonDateIsNotNull(json.data)) {
     removePoint('leave-columnar-point', 'r-leave-columnar');
+    var leftData = [];
+    var rightData = [];
+    var nameone = [];
+    var nametwo = [];
     var dataName = [];
-    var data = [];
     $.each(json.data, function (i, item) {
-      dataName[i] = item.workEfficiency + '\n\n' + Number(item.totalNum) + '人'; // 区域\n总人数
-      data[i] = getProportion(item.turnoverInttalNum, item.totalNum); // 离职倾向总人数,总人数
+      leftData[i] = item.turnoverInttalNum;
+      rightData[i] = item.totalNum;
+      dataName[i] = item.workEfficiency;
     });
-    changeHColumar('leave-columnar', dataName, data, '可能离职');
+    changeHColumarLeave('leave-columnar', leftData, rightData, '可能离职人数', '总人数',
+        dataName);
   }
   if (checkCodeEqualsOther(json)) {
     checkDivIfExist('leave-columnar-point', 'r-leave-columnar');

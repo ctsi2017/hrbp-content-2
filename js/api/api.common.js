@@ -16,8 +16,8 @@ var CTSI_API_JSON;
 // var POTENCY_TASKPERFORMCONTRAST_URL = '/hrbp-content-1/view/potency/taskPerformContrast.html';
 
 // var CONTRAST_HTMLDOMAIN = 'http://www.ixiaoru.com/hrbp-content-1'; //云公司使用 -1 本地静态文件地址
-// var CONTRAST_HTMLDOMAIN = 'http://123.207.219.95:80/hrbp-content-2';  //Nginx开发 -2 本地静态文件地址
-var CONTRAST_HTMLDOMAIN = 'http://192.9.100.76:8081/hrbp-content-2';  //李鹏测试Nginx -2 本地静态文件地址
+var CONTRAST_HTMLDOMAIN = 'http://123.207.219.95:80/hrbp-content-2';  //Nginx开发 -2 本地静态文件地址
+// var CONTRAST_HTMLDOMAIN = 'http://192.9.100.76:8081/hrbp-content-2';  //李鹏测试Nginx -2 本地静态文件地址
 // var CONTRAST_HTMLDOMAIN = 'http://42.123.65.196:18080/hrbp-content-2';  //正式环境Nginx -2 本地静态文件地址
 
 var ANALY_POSITIONCHANGECONTRAST_URL = '/view/analy/positionChangeContrast.html';
@@ -880,12 +880,15 @@ function changeQuadrant(array, arr) {
  *
  * @param index 数值.
  * @param id id.
- * @param indexWarningValue 接口返回的指数预警值.
+ * @param warningValue
  */
-function checkIndexRedByIndex(index, id, indexWarningValue) {
-  if (Number(index) < (indexWarningValue === 0 ? INDEX_RED
-          : indexWarningValue)) {
+function checkIndexRedByIndex(index, id, warningValue) {
+  if (Number(index) < (warningValue === 0 ? INDEX_RED : warningValue)) {
     $('#' + id).css("color", '#e66440');
+  } else {
+    if (id === 'potency_index') { // 工作效能指数特殊处理
+      $('#' + id).css("color", '#343a46');
+    }
   }
 }
 

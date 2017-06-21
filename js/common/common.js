@@ -459,7 +459,7 @@ function leavecolumnar(obj) {
             }
         }],
         series: [{
-            name: obj.nameone || '包租费',
+            name: obj.nameone || '可能要离职人数',
             type: 'bar',
             barWidth: 13,
             z: 10,
@@ -471,7 +471,7 @@ function leavecolumnar(obj) {
             // color : ["#e66440","#2a303e"],
             data: obj.leftData || [20, 12, 31, 34, 31]
         }, {
-            name: obj.nametwo || '装修费',
+            name: obj.nametwo || '总人数',
             type: 'bar',
             barWidth: 13,
             barGap: '-100%',
