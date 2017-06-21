@@ -58,7 +58,7 @@ function cbEmpDimissionCityDetails(json) {
         $('#city_totalNum_5').html(item.totalNum);
       }
     });
-    changeHRing5(v1, v2, v3, v4, v5);
+    changeHRing5(v1, v2, v3, v4, v5, '一线城市', '二线城市', '三线城市', '四线城市', '五线城市');
   }
   if (checkCodeEqualsOther(json)) {
     checkDivIfExist('leave-ring-point', 'r-leave-ring');

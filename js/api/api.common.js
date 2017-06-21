@@ -302,15 +302,19 @@ function changeHColumarWarningValue(id, dataName, data, earlyLine, nameone) {
  * @param v2 中.
  * @param v3 低.
  * @param v4
+ * @param name1
+ * @param name2
+ * @param name3
+ * @param name4
  */
-function changeHRing4(v1, v2, v3, v4) {
+function changeHRing4(v1, v2, v3, v4, name1, name2, name3, name4) {
   h_ring({
     name: "h-ring",
     data: [
-      {value: v1},
-      {value: v2},
-      {value: v3},
-      {value: v4}
+      {value: v1, name: name1},
+      {value: v2, name: name2},
+      {value: v3, name: name3},
+      {value: v4, name: name4}
     ]
   });
 }
@@ -322,17 +326,22 @@ function changeHRing4(v1, v2, v3, v4) {
  * @param v3 三线.
  * @param v4 四线.
  * @param v5 五线.
+ * @param name1
+ * @param name2
+ * @param name3
+ * @param name4
+ * @param name5
  */
-function changeHRing5(v1, v2, v3, v4, v5) {
+function changeHRing5(v1, v2, v3, v4, v5, name1, name2, name3, name4, name5) {
   h_ring({
     name: "h-ring",
     color: ['#e66440', '#f2883b', '#9aabd2', '#68738c', '#3c424f'],
     data: [
-      {value: v1},
-      {value: v2},
-      {value: v3},
-      {value: v4},
-      {value: v5}
+      {value: v1, name: name1},
+      {value: v2, name: name2},
+      {value: v3, name: name3},
+      {value: v4, name: name4},
+      {value: v5, name: name5}
     ]
   });
 }
@@ -871,9 +880,11 @@ function changeQuadrant(array, arr) {
  *
  * @param index 数值.
  * @param id id.
+ * @param indexWarningValue 接口返回的指数预警值.
  */
-function checkIndexRedByIndex(index, id) {
-  if (Number(index) < INDEX_RED) {
+function checkIndexRedByIndex(index, id, indexWarningValue) {
+  if (Number(index) < (indexWarningValue === 0 ? INDEX_RED
+          : indexWarningValue)) {
     $('#' + id).css("color", '#e66440');
   }
 }
