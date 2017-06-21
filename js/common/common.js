@@ -405,6 +405,88 @@ function columnar(obj) {
     // $(".base-chara").css("display","flex");
 }
 
+/*
+ * 这是离职识别分析柱状图
+ * 传入两个data 显示数据为人数 不以百分比显示
+ */
+function leavecolumnar(obj) {
+    if (obj == undefined) {
+        obj = {};
+    }
+    var chart = document.getElementById(obj.idname || 'h-columnar');
+    var echart = echarts.init(chart);
+    option = {
+        title: {
+            subtext: '单位 ：人数',
+            x: "left",
+            y: "-18",
+        },
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+            }
+        },
+        grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+        },
+        xAxis: [{
+            type: 'category',
+            data: obj.dataname || ['新虹桥', '中山公园', '虹桥', '镇宁路', '天山古北'],
+            axisTick: {
+                show: false
+            },
+            "axisLabel":{
+                interval: 0
+            },
+        }],
+        yAxis: [{
+            type: 'value',
+            axisLabel: {
+                formatter: '{value}'
+            },
+            axisTick: {
+                show: false
+            },
+            axisLine: {
+                show: false
+            },
+            splitArea: {
+                show: obj.splitArea || false
+            }
+        }],
+        series: [{
+            name: obj.nameone || '包租费',
+            type: 'bar',
+            barWidth: 13,
+            z: 10,
+            itemStyle: {
+                normal: {
+                    color: "#e66440"
+                }
+            },
+            // color : ["#e66440","#2a303e"],
+            data: obj.leftData || [20, 12, 31, 34, 31]
+        }, {
+            name: obj.nametwo || '装修费',
+            type: 'bar',
+            barWidth: 13,
+            barGap: '-100%',
+            itemStyle: {
+                normal: {
+                    color: "#2a303e"
+                }
+            },
+            data: obj.rightData || [10, 20, 5, 9, 3]
+        }]
+    };
+    echart.setOption(option);
+    // $(".base-chara").css("display","flex");
+}
+
 //这是象限图的图标
 function ellipsePath(x, y, xl, yl) {
     var pathArray = [];
