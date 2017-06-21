@@ -407,7 +407,7 @@ function columnar(obj) {
 
 /*
  * 这是离职识别分析柱状图
- * 传入两个data 显示数据为人数 不以百分比显示 以人数显示0
+ * 传入两个data 显示数据为人数 不以百分比显示 以人数显示
  */
 function leavecolumnar(obj) {
     if (obj == undefined) {
