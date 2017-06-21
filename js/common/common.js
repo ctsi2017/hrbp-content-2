@@ -123,7 +123,7 @@ function h_columar(obj) { //这是长方形柱状图
                 },
                 textStyle: {
                     fontFamily: "微软雅黑",
-                    fontSize: 14,
+                    fontSize: 12,
                 }
             }
 
@@ -262,7 +262,7 @@ function early_columar(obj) { //这是长方形柱状图
                 },
                 textStyle: {
                     fontFamily: "微软雅黑",
-                    fontSize: 14,
+                    fontSize: 12,
                 }
             }
         }],
