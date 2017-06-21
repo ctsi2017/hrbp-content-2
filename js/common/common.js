@@ -119,7 +119,7 @@ function h_columar(obj) { //这是长方形柱状图
                 formatter: function(value, index) {
                     //return value + "\n\n" + data.barData[1].data[index] + "人";
                     alert(obj.totNum);
-                    return value+"\n\n"+obj.totNum[index]+"人";
+                    return value+"\n\n"+obj.totNum[index];
                 },
                 textStyle: {
                     fontFamily: "微软雅黑",
@@ -159,6 +159,7 @@ function h_columar(obj) { //这是长方形柱状图
                     }
                 }
             },
+            z: 10,
             data: obj.data || [23, 25, 35, 40, 60],
 
         },
@@ -177,6 +178,7 @@ function h_columar(obj) { //这是长方形柱状图
 
                     }
                 },
+                barGap: '-100%',
                 "data": [100,100,100,100,100]
 
             },
