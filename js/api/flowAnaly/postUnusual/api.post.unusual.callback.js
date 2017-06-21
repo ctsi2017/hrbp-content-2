@@ -49,12 +49,14 @@ function cbPostAbnormalRanking(json) {
         var dataName = [];
         var data = [];
         var warningValueArr = [];
+        var totlNum = [];
         $.each(json.data, function (i, item) {
-            dataName[i] = item.region + '\n\n' + Number(item.totalNum) + '人';
+            dataName[i] = item.region ; // 区域\n区域人数+ '\n\n' + Number(item.totalNum)
+            totlNum[i] = item.totalNum + '人';
             data[i] = getProportion(item.abnormalNum, item.totalNum);
             warningValueArr[i] = $('#warningValue').html();
         });
-        changeHColumarWarningValue('post-norchart', dataName, data, warningValueArr, '异常');
+        changeHColumarWarningValue('post-norchart', dataName, data, warningValueArr,totlNum, '异常');
     }
     if (checkCodeEqualsOther(json)) {
         checkDivIfExist('warningValue_point', 'r_warningValue');

@@ -48,13 +48,15 @@ function cbRegionPostChange(json) {
         var dataName = [];
         var data = [];
         var warningValueArr = [];
+        var totlNum = [];
         $.each(json.data, function (i, item) {
-            dataName[i] = item.region + '\n\n' + Number(item.totalNum) + '人'; // 区域\n区域人数
+            dataName[i] = item.region ; // 区域\n区域人数+ '\n\n' + Number(item.totalNum)
+            totlNum[i] = item.totalNum + '人';
             data[i] = substringChar(item.proportion); // 占比
             // item.postYesNum; // 岗位变动识别为“是”人数	postYesNum	必填	string
             warningValueArr[i] = warningValueNum;
         });
-        changeHColumarWarningValue('post-changepic', dataName, data, warningValueArr, '岗位变动');
+        changeHColumarWarningValue('post-changepic', dataName, data, warningValueArr,totlNum, '岗位变动');
     }
     if (checkCodeEqualsOther(json)) {
         checkDivIfExist('warningValue_point', 'r_warningValue');

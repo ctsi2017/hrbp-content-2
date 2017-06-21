@@ -92,7 +92,9 @@ function h_columar(obj) { //这是长方形柱状图
         ],
         tooltip: {
             trigger: 'axis',
-            formatter: '{b}<br/>{a} : {c}%'
+            axisPointer: { // 坐标轴指示器，坐标轴触发有效
+                type: 'shadow' // 默认为直线，可选为：'line' | 'shadow'
+            }
         },
         grid: [
             {x: '12%', y: '20%',width:'87%',height:"55%"},
@@ -113,7 +115,20 @@ function h_columar(obj) { //这是长方形柱状图
                 interval: 0
             },
             data: obj.dataname || ['装维', '装维', '装维', '装维', '装维'],
-        }],
+            axisLabel: {
+                formatter: function(value, index) {
+                    //return value + "\n\n" + data.barData[1].data[index] + "人";
+                    return value+"\n\n"+obj.totNum[index]+"人";
+                },
+                textStyle: {
+                    fontFamily: "微软雅黑",
+                    fontSize: 14,
+                }
+            }
+
+
+
+    }],
         yAxis: [{
             "type": "value",
             splitLine: {

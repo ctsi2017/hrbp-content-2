@@ -284,14 +284,15 @@ function changeHColumar(id, dataName, data, nameone) {
  * @param earlyLine
  * @param nameone
  */
-function changeHColumarWarningValue(id, dataName, data, earlyLine, nameone) {
+function changeHColumarWarningValue(id, dataName, data, earlyLine,totlNum, nameone) {
   early_columar({
     idname: id,  // 定义div的id
     dataname: dataName, //底部显示的字
     data: data,  //下面的数据的参数
     topshow: false,  //是否在頂部顯示數值
     nameone: nameone,  //深色参数名字
-    earlyLine: earlyLine
+    earlyLine: earlyLine,
+    totNum : totlNum
   });
 }
 
