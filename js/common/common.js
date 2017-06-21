@@ -148,7 +148,6 @@ function h_columar(obj) { //这是长方形柱状图
         series: [{
             name: obj.nameone || "初始人数",
             type: 'bar',
-            stack: '总量',
             barWidth: 14,
             itemStyle: {
                 normal: {
@@ -165,7 +164,7 @@ function h_columar(obj) { //这是长方形柱状图
         },
             {
                 "type": "bar",
-                "stack": "总量",
+                "name" : "总人数",
                 "itemStyle": {
                     "normal": {
                         "color": "#3c424f",
@@ -178,15 +177,7 @@ function h_columar(obj) { //这是长方形柱状图
 
                     }
                 },
-                "data": function () {
-                    var arr = [];
-                    var num = 0;
-                    for (var i = 0; i < obj.data.length; i++) {
-                        num = 100 - obj.data[i];
-                        arr.push(num);
-                    }
-                    return arr;
-                }(),
+                "data": [100,100,100,100,100]
 
             },
             {

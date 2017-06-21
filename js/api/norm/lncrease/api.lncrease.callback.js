@@ -32,12 +32,14 @@ function cbRegionWorkersZengGangRanking(json) {
         removePoint('h-norchart-point', 'r-h-norchart');
         var dataName = [];
         var data = [];
+        var totlNum = [];
         $.each(json.data, function (i, item) {
-            dataName[i] = item.region + '\n\n' + Number(item.totalNum) + '人';
+            dataName[i] = item.region ; // 区域\n区域人数+ '\n\n' + Number(item.totalNum)
+            totlNum[i] = item.totalNum + '人';
             data[i] = substringChar(item.proportion);
             // item.nonStandardNum;// 用工规范为“离岗”总人数	nonStandardNum	必填	String
         });
-        changeHColumar('h-norchart', dataName, data, '用工增岗');
+        changeHColumar('h-norchart', dataName, data,totlNum, '用工增岗');
     }
     if (checkCodeEqualsOther(json)) {
         checkDivIfExist('h-norchart-point', 'r-h-norchart');

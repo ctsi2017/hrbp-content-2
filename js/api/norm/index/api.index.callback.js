@@ -46,12 +46,14 @@ function cbRegionSpecificationRanking(json) {
         removePoint("norm-normchart", "r-h-norchart");
         var dataName = [];
         var data = [];
+        var totlNum = [];
         $.each(json.data, function (i, item) {
-            dataName[i] = item.region + '\n\n' + Number(item.totalNum) + '人'; // 区域\n用工规范总人数
+            dataName[i] = item.region ; // 区域\n区域人数+ '\n\n' + Number(item.totalNum)
+            totlNum[i] = item.totalNum + '人';
             data[i] = substringChar(item.proportion);
             // item.nonStandardNum; // 用工规范为“否”总人数	nonStandardNum	必填	String
         });
-        changeHColumar('h-norchart', dataName, data, '用工不规范');
+        changeHColumar('h-norchart', dataName, data,totlNum, '用工不规范');
     }
     if (checkCodeEqualsOther(json)) {
         checkDivIfExist("norm-normchart", "r-h-norchart");

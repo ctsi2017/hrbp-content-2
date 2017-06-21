@@ -265,13 +265,14 @@ function changeColumar5(id, dataName, data, rightData, threeData, fourData,
  * @param data 占比.
  * @param nameone
  */
-function changeHColumar(id, dataName, data, nameone) {
+function changeHColumar(id, dataName, data,totlNum, nameone) {
   h_columar({
     idname: id,  // 定义div的id
     dataname: dataName, //底部显示的字
     data: data,  //下面的数据的参数
     topshow: false,  //是否在頂部顯示數值
-    nameone: nameone  //深色参数名字
+    nameone: nameone,  //深色参数名字
+    totNum : totlNum // 总人数
   });
 }
 
@@ -292,7 +293,7 @@ function changeHColumarWarningValue(id, dataName, data, earlyLine,totlNum, nameo
     topshow: false,  //是否在頂部顯示數值
     nameone: nameone,  //深色参数名字
     earlyLine: earlyLine,
-    totNum : totlNum
+    totNum : totlNum //总人数
   });
 }
 
