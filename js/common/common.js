@@ -262,6 +262,17 @@ function early_columar(obj) { //这是长方形柱状图
                 interval: 0
             },
             data: obj.dataname || ['装维', '装维', '装维', '装维', '装维'],
+            axisLabel: {
+                formatter: function(value, index) {
+                    //return value + "\n\n" + data.barData[1].data[index] + "人";
+                    alert(obj.totNum);
+                    return value+"\n\n"+obj.totNum[index]+"人";
+                },
+                textStyle: {
+                    fontFamily: "微软雅黑",
+                    fontSize: 14,
+                }
+            }
         }],
         yAxis: [{
             "type": "value",
