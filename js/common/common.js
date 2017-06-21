@@ -79,7 +79,7 @@ function h_columar(obj) { //这是长方形柱状图
     option = {
         title: [
             {
-                subtext: '单位 ：人',
+                subtext: '单位 ：%',
                 x: "left",
                 y: "-18",
             },
@@ -92,7 +92,7 @@ function h_columar(obj) { //这是长方形柱状图
         ],
         tooltip: {
             trigger: 'axis',
-            formatter: '{a} : {c}%'
+            formatter: '{b}<br/>{a} : {c}%'
         },
         grid: [
             {x: '12%', y: '20%',width:'87%',height:"55%"},
@@ -210,7 +210,7 @@ function early_columar(obj) { //这是长方形柱状图
     option = {
         title: [
             {
-                subtext: '单位 ：人',
+                subtext: '单位 ：%',
                 x: "left",
                 y: "-18",
             },
