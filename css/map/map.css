@@ -68,9 +68,13 @@ a {
   display: inline-block;
   width: 1.5rem;
   height: 100%;
+  float: left;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+.base-header div span {
+  float: left;
 }
 .base-header .base-lhead {
   text-align: center;
@@ -78,6 +82,7 @@ a {
 .base-header .base-lhead s {
   float: left;
   margin-left: 0.2rem;
+  text-align: center;
 }
 .base-header .base-lhead span {
   float: left;

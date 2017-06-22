@@ -24,7 +24,7 @@ function h_ring(obj) {   //这是圆圈形状的图标
             {
                 name: '访问来源',
                 type: 'pie',
-                radius: ['25%', '50%'],
+                radius: ['25%', '55%'],
                 center: ['50%', '50%'],
                 selectedMode: 'single',
                 color: color,
@@ -45,8 +45,8 @@ function h_ring(obj) {   //这是圆圈形状的图标
                         lineStyle:{
                             type : 'dotted'
                         },
-                        length : 10,
-                        length2 : 10
+                        length : 8,
+                        length2 : 8
 
                     }
                 },
