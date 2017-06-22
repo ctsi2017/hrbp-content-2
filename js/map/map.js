@@ -18,20 +18,20 @@ function showmap(city) {
         //
         // console.log(zoom);
     });
-    // var zoom = map.getZoom();  //获取到当前的缩放大小zoom值
-    // var centers = map.getCenter();  //获取到中心点的坐标
-    // // var position = getCoordinate(map); //这是获取四个坐标点
-    // var center = centers.lng + "," +  centers.lat;
-    // var widthHeight = $("#container").height() + "," + $("#container").width();//地图的宽高
+    var zoom = map.getZoom();  //获取到当前的缩放大小zoom值
+    var centers = map.getCenter();  //获取到中心点的坐标
+    // var position = getCoordinate(map); //这是获取四个坐标点
+    var center = centers.lng + "," +  centers.lat;
+    var widthHeight = $("#container").height() + "," + $("#container").width();//地图的宽高
     var checkChange = 1;
-    // if (zoom < 14) {
-    //     // map.setFitView();
-    //     postInfoOverviewPng(widthHeight, zoom, center);
-    //     checkChange = 2;
-    // } else {
-    //     postInfoOverview();
-    //
-    // }
+    if (zoom < 14) {
+        // map.setFitView();
+        postInfoOverviewPng(widthHeight, zoom, center);
+        checkChange = 2;
+    } else {
+        postInfoOverview();
+
+    }
     map.on('moveend', function (e) {  //这是地图移动结束获取事件
         var zoom1 = map.getZoom();  //获取到当前的缩放大小zoom值
         var centers = map.getCenter();  //获取到中心点的坐标
