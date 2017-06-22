@@ -634,6 +634,9 @@ function checkCallBackJsonIsNotNull(json) {
 }
 
 function substringChar(str) {
+    if(str === "0" || str === 0){
+        return str;
+    }
   return str.substring(0, str.length - 1);
 }
 
