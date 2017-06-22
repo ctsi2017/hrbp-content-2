@@ -62,13 +62,21 @@ function h_ring(obj) {   //这是圆圈形状的图标
     echart.setOption(option);
     // $(".base-chara").css("display","flex");
 }
+
+/*
+用工规范三个页面使用的柱状图
+* obj 为传递进来的数据的总对象
+* obj.nameone 代表异常名称   obj.data 代表红色显示的 数值
+* obj.idname 代表使用这个echarts图标的 div 的ID
+* judeScreen() 根据屏幕判断总人数显示的位置
+* */
+
 function h_columar(obj) { //这是长方形柱状图
     if (obj == undefined) {
         obj = {};
     }
     var chart = document.getElementById(obj.idname || 'h-columnar');
     var echart = echarts.init(chart);
-    console.log(obj);
     var titleStyle = {
         color: '#666666',
         fontStyle: 'normal',
@@ -203,6 +211,15 @@ function h_columar(obj) { //这是长方形柱状图
     echart.setOption(option);
     // $(".base-chara").css("display","flex");
 }
+
+/*
+ 人员流动性分析前两个页面 有预警值的 柱状图
+ * obj 为传递进来的数据的总对象
+ * obj.nameone 代表异常名称   obj.data 代表红色显示的 数值
+ * obj.idname 代表使用这个echarts图标的 div 的ID
+ * judeScreen() 根据屏幕判断总人数显示的位置
+ * obj.earlyLine[0] 代表预警值，传递进来的是一个数组，所以只取第一个值
+ * */
 function early_columar(obj) { //这是长方形柱状图
     if (obj == undefined) {
         obj = {};
@@ -336,7 +353,14 @@ function early_columar(obj) { //这是长方形柱状图
     echart.setOption(option);
     // $(".base-chara").css("display","flex");
 }
-//这是对比的柱状图
+//
+/*
+ 这是对比的柱状图
+ * obj 为传递进来的数据的总对象
+ * obj.nameone 代表异常名称   obj.data 代表红色显示的 数值
+ * obj.nametwo 代表黑色柱子名称  obj.rightData 代表黑色柱子的数值
+ * obj.idname 代表使用这个echarts图标的 div 的ID
+ * */
 function columnar(obj) {
     if (obj == undefined) {
         obj = {};
