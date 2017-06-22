@@ -74,6 +74,10 @@ a {
   white-space: nowrap;
 }
 .base-header div span {
+  display: inline-block;
+  width: 0.65rem;
+  height: 100%;
+  text-align: center;
   float: left;
 }
 .base-header .base-lhead {
@@ -81,7 +85,6 @@ a {
 }
 .base-header .base-lhead s {
   float: left;
-  margin-left: 0.2rem;
   text-align: center;
 }
 .base-header .base-lhead span {
