@@ -24,7 +24,7 @@ function h_ring(obj) {   //这是圆圈形状的图标
             {
                 name: '访问来源',
                 type: 'pie',
-                radius: ['35%', '65%'],
+                radius: ['30%', '65%'],
                 center: ['50%', '50%'],
                 selectedMode: 'single',
                 color: color,
