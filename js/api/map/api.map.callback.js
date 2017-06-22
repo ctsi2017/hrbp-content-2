@@ -100,7 +100,7 @@ function cbTaskPerformanceRanking(json) {
         data[1] = item.abnormalNum;
         topdata[1] = item.normalNum;
       }
-      if (item.workEfficiency === '慵懒') {
+      if (item.workEfficiency === '普通') {
         $('#stats_lazy_y').html(item.normalNum);
         $('#stats_lazy_n').html(item.abnormalNum);
         dataname[2] = item.workEfficiency;
@@ -114,7 +114,7 @@ function cbTaskPerformanceRanking(json) {
         data[3] = item.abnormalNum;
         topdata[3] = item.normalNum;
       }
-      if (item.workEfficiency === '普通') {
+      if (item.workEfficiency === '慵懒') {
         $('#stats_ordinary_y').html(item.normalNum);
         $('#stats_ordinary_n').html(item.abnormalNum);
         dataname[4] = item.workEfficiency;
