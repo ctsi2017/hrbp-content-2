@@ -25,7 +25,7 @@ function showmap(city) {
     var widthHeight = $("#container").height() + "," + $("#container").width();//地图的宽高
     var checkChange = 1;
     if (zoom < 14) {
-        map.setFitView();
+        // map.setFitView();
         postInfoOverviewPng(widthHeight, zoom, center);
         checkChange = 2;
     } else {
