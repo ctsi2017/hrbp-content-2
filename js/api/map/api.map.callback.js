@@ -78,7 +78,7 @@ function cbTaskPerformanceRanking(json) {
     // 2017年5月
     $('#stats_date').html(getYYYYMMByMonths());
     // 北京市装维以及渠道人员
-    $('#stats_city').html(CTSI_API_JSON.baseInfo.city);
+      $('#stats_city').html(getPermissionAreaByUserMaxPermission());
     $('#stats_post').html(getPostStrByPostList());
 
     removePoint("h-jobpote-point", "r-h-jobpote");

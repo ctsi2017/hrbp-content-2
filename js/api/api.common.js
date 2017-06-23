@@ -16,9 +16,9 @@ var CTSI_API_JSON;
 // var POTENCY_TASKPERFORMCONTRAST_URL = '/hrbp-content-1/view/potency/taskPerformContrast.html';
 
 // var CONTRAST_HTMLDOMAIN = 'http://www.ixiaoru.com/hrbp-content-1';+ //云公司使用 -1 本地静态文件地址
-// var CONTRAST_HTMLDOMAIN = 'http://123.207.219.95:80/hrbp-content-2';  //Nginx开发 -2 本地静态文件地址
+var CONTRAST_HTMLDOMAIN = 'http://123.207.219.95:80/hrbp-content-2';  //Nginx开发 -2 本地静态文件地址
 // var CONTRAST_HTMLDOMAIN = 'http://192.9.100.76:8081/hrbp-content-2';  //李鹏测试Nginx -2 本地静态文件地址
-var CONTRAST_HTMLDOMAIN = 'http://42.123.65.196:18080/hrbp-content-2';  //正式环境Nginx -2 本地静态文件地址
+// var CONTRAST_HTMLDOMAIN = 'http://42.123.65.196:18080/hrbp-content-2';  //正式环境Nginx -2 本地静态文件地址
 
 var ANALY_POSITIONCHANGECONTRAST_URL = '/view/analy/positionChangeContrast.html';
 var ANALY_ZAIGANGABNORMAL_URL = '/view/analy/zaiGangAbnormal.html';
@@ -999,4 +999,26 @@ function checkContrastIsNullByTypeAndValue(region, post, month, type) {
   } else {
     return type === 3 && month.length > 0;
   }
+}
+
+/**
+ * 根据最高权限，获取对应的区域值.
+ */
+function getPermissionAreaByUserMaxPermission() {
+    var area = CTSI_API_JSON.baseInfo.defaultZone;
+    // 集团（省、市）
+    if (CTSI_API_JSON.baseInfo.userMaxPermission === 0) {
+        area = CTSI_API_JSON.baseInfo.defaultZone; // 用户选择的区域,客户端回调接口cbMapByProvince.
+    } else if (CTSI_API_JSON.baseInfo.userMaxPermission === 1) {// 省级别（省、市、区县）
+        area = CTSI_API_JSON.baseInfo.province;
+    } else if (CTSI_API_JSON.baseInfo.userMaxPermission === 2) { // 市（市、区县、街道）
+        area = CTSI_API_JSON.baseInfo.city;
+    } else if (CTSI_API_JSON.baseInfo.userMaxPermission === 3) { // 区县（区县、街道、网格）
+        area = CTSI_API_JSON.baseInfo.district;
+    } else if (CTSI_API_JSON.baseInfo.userMaxPermission === 4) { // 街道（街道、网格）
+        area = CTSI_API_JSON.baseInfo.street;
+    } else if (CTSI_API_JSON.baseInfo.userMaxPermission === 5) { // 网格，网格不为空区域4项必填
+        area = CTSI_API_JSON.baseInfo.grid;
+    }
+    return area;
 }
