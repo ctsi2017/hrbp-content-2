@@ -5,16 +5,22 @@ function cbEmpDimissionWhereabouts(json) {
     var y_proportion = 0;
     var n_proportion = 0;
     $.each(json.data, function (i, item) {
-      // 工作地变更识别为“ 否”
-      $.each(item.quitDirInRate, function (j, qdir) {
-        y_proportion = substringChar(qdir.proportion); // 占比	proportion	必填	String
-        $('#y_totalNum').html(qdir.totalNum);// 总人数	totalNum	必填	String
-      });
-      // 工作地变更识别为“ 是”
-      $.each(item.quitDirOutRate, function (k, qdor) {
-        n_proportion = substringChar(qdor.proportion); // 占比	proportion	必填	String
-        $('#n_totalNum').html(qdor.totalNum);// 总人数	totalNum	必填	String
-      })
+      if(checkRegionNotNull(item.quitDirInRate)){
+        // 工作地变更识别为“ 否”
+        $.each(item.quitDirInRate, function (j, qdir) {
+          y_proportion = substringChar(qdir.proportion); // 占比	proportion	必填	String
+          $('#y_totalNum').html(qdir.totalNum);// 总人数	totalNum	必填	String
+        });
+      }
+      if(checkRegionNotNull(item.quitDirOutRate)){
+        // 工作地变更识别为“ 是”
+        $.each(item.quitDirOutRate, function (k, qdor) {
+          n_proportion = substringChar(qdor.proportion); // 占比	proportion	必填	String
+          $('#n_totalNum').html(qdor.totalNum);// 总人数	totalNum	必填	String
+        })
+      }
+
+
     });
     scaleMap2('leave-twing', 'base-llwig', 'base-zlwig', y_proportion,
         n_proportion, 'num-lchar', 'num-zchar');
