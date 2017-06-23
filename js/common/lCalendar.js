@@ -955,7 +955,7 @@ window.lCalendar = (function() {
                 $(".data-closedrop").fadeOut();
                 setItem("getDate", date_year+date_mm);
                 $("#month").html(date_year+"."+date_mm);
-                alert(date_year+date_mm);
+                alert(date_year+""+date_mm);
                 formDataMouth(date_year+date_mm);
 
                 document.getElementById("monthFlag").value = "true";
