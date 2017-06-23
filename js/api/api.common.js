@@ -16,8 +16,8 @@ var CTSI_API_JSON;
 // var POTENCY_TASKPERFORMCONTRAST_URL = '/hrbp-content-1/view/potency/taskPerformContrast.html';
 
 // var CONTRAST_HTMLDOMAIN = 'http://www.ixiaoru.com/hrbp-content-1';+ //云公司使用 -1 本地静态文件地址
-// var CONTRAST_HTMLDOMAIN = 'http://123.207.219.95:80/hrbp-content-2';  //Nginx开发 -2 本地静态文件地址
-var CONTRAST_HTMLDOMAIN = 'http://192.9.100.76:8081/hrbp-content-2';  //李鹏测试Nginx -2 本地静态文件地址
+var CONTRAST_HTMLDOMAIN = 'http://123.207.219.95:80/hrbp-content-2';  //Nginx开发 -2 本地静态文件地址
+// var CONTRAST_HTMLDOMAIN = 'http://192.9.100.76:8081/hrbp-content-2';  //李鹏测试Nginx -2 本地静态文件地址
 // var CONTRAST_HTMLDOMAIN = 'http://42.123.65.196:18080/hrbp-content-2';  //正式环境Nginx -2 本地静态文件地址
 
 var ANALY_POSITIONCHANGECONTRAST_URL = '/view/analy/positionChangeContrast.html';

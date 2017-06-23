@@ -55,6 +55,7 @@ function cbRegionPostChange(json) {
             data[i] = substringChar(item.proportion); // 占比
             // item.postYesNum; // 岗位变动识别为“是”人数	postYesNum	必填	string
             warningValueArr[i] = warningValueNum;
+            alert(data[i]);
         });
         changeHColumarWarningValue('post-changepic', dataName, data, warningValueArr,totlNum, '岗位变动');
     }
