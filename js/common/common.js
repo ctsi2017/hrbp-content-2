@@ -862,7 +862,7 @@ function createPersonnel(data, obj, callback) {
         $(".base-closedrop").fadeOut();
         $("#post").html(leftvalPost);
         setItem("getPost", leftvalPost);
-        callback(getItem("getArea"), getItem("getArea1"), leftvalPost, getItem("getDate"));
+        callback(getItem("getArea"), getItem("getArea1"), getItem("getPost"), getItem("getDate"));
 
     });
 
