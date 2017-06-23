@@ -932,7 +932,7 @@ window.lCalendar = (function() {
                 $(".base-rhead .icon-xiala").removeClass("icon-shangla");
                 $(".base-header").removeClass("backgroundThree");
                 $(".data-closedrop").fadeOut();
-                setItem("getDate", date_year+"."+date_mm+date_dd);
+                setItem("getDate", date_year+""+date_mm+date_dd);
                 $("#month").html(date_year+"."+date_mm+"."+date_dd);
                 formDataDay(date_year+""+date_mm+date_dd);
                 document.getElementById("dateFlag").value = "true";
@@ -952,7 +952,7 @@ window.lCalendar = (function() {
                 $(".base-rhead .icon-xiala").removeClass("icon-shangla");
                 $(".base-header").removeClass("backgroundThree");
                 $(".data-closedrop").fadeOut();
-                setItem("getDate", date_year+"."+date_mm);
+                setItem("getDate", date_year+""+date_mm);
                 $("#month").html(date_year+"."+date_mm);
                 formDataMouth(date_year+""+date_mm);
 
