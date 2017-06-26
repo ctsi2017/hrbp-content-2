@@ -72,33 +72,70 @@
     <div class="base-title">
       工作效能分布图
     </div>
-    <div id="scatter_point">
-      <div class="potency-picture">
-        <div id="scatter"></div>
-      </div>
-      <div class="potency-strip" id="strip">
-        <div class="potency-rate1">
-          <span class="potency-span1"></span>
-          <s>高效 <i id="num-span1"></i></s>
-        </div>
-        <div class="potency-rate2">
-          <span class="potency-span2"></span>
-          <s>勤奋 <i id="num-span2"></i></s>
-        </div>
-        <div class="potency-rate3">
-          <span class="potency-span3"></span>
-          <s>普通 <i id="num-span3"></i></s>
-        </div>
-        <div class="potency-rate4">
-          <span class="potency-span4"></span>
-          <s>低效 <i id="num-span4"></i></s>
-        </div>
-        <div class="potency-rate5">
-          <span class="potency-span5"></span>
-          <s>慵懒 <i id="num-span5"></i></s>
+    <!--<div id="scatter_point">-->
+      <!--<div class="potency-picture">-->
+        <!--<div id="scatter"></div>-->
+      <!--</div>-->
+      <!--<div class="potency-strip" id="strip">-->
+        <!--<div class="potency-rate1">-->
+          <!--<span class="potency-span1"></span>-->
+          <!--<s>高效 <i id="num-span1"></i></s>-->
+        <!--</div>-->
+        <!--<div class="potency-rate2">-->
+          <!--<span class="potency-span2"></span>-->
+          <!--<s>勤奋 <i id="num-span2"></i></s>-->
+        <!--</div>-->
+        <!--<div class="potency-rate3">-->
+          <!--<span class="potency-span3"></span>-->
+          <!--<s>普通 <i id="num-span3"></i></s>-->
+        <!--</div>-->
+        <!--<div class="potency-rate4">-->
+          <!--<span class="potency-span4"></span>-->
+          <!--<s>低效 <i id="num-span4"></i></s>-->
+        <!--</div>-->
+        <!--<div class="potency-rate5">-->
+          <!--<span class="potency-span5"></span>-->
+          <!--<s>慵懒 <i id="num-span5"></i></s>-->
+        <!--</div>-->
+        <!---->
+      <!--</div>-->
+    <!--</div>-->
+    <div class="potency-round">
+      <div id="scatter"></div>
+      <div class="potency-block">
+        <div class="potency-block">
+          <div class="potency-block1">
+            <span></span>
+            高效
+          </div>
+          <div class="potency-block2">
+            <span></span>
+            勤奋
+          </div>
+          <div class="potency-block3">
+            <span></span>
+            普通
+          </div>
+          <div class="potency-block4">
+            <span></span>
+            低效
+          </div>
+          <div class="potency-block5">
+            <span></span>
+            慵懒
+          </div>
         </div>
       </div>
     </div>
+  <div class="potency-explain">
+    <p>以员工工作业绩和工作时长为基本因素，对员工工作效能进行分类评估，各类工作效能定义如下：</p>
+    <br/><br/>
+    <p>勤奋：工作业绩高，工作时长长</p>
+    <p>高效：工作业绩高，工作时长短</p>
+    <p>慵懒：工作业绩低，工作时长短</p>
+    <p>低效：工作业绩低，工作时长长</p>
+    <p>普通：工作业绩和工作时长均在常规范围内</p>
+  </div>
   </div>
 </div>
 <script src="../../js/common/echarts.min.js"></script>
