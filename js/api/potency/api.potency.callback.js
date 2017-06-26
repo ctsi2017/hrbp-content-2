@@ -39,6 +39,10 @@ function cbEmpWorkEfficiencyMap(json) {
   }
 }
 function cbEmpWorkEfficiencyPercentage(json) {
+
+  json =  {"code":200,"status":"success","message":"success","data":[{"assessment":"高效","proNum":"183","proportion":"24.9%"},{"assessment":"勤奋","proNum":"122","proportion":"16.6%"},{"assessment":"普通","proNum":"245","proportion":"33.33%"},{"assessment":"低效","proNum":"62","proportion":"8.44%"},{"assessment":"慵懒","proNum":"123","proportion":"16.73%"}],"time":"2017-06-26 14:46:38"}
+;
+
   json = JsonParse(json);
   if (checkCallBackJsonIsNotNull(json) && checkJsonDateIsNotNull(json.data)) {
     removePoint('scatter_point', 'r_scatter_point');
@@ -68,41 +72,29 @@ function cbEmpWorkEfficiencyPercentage(json) {
     //     'potency-rate3', 'potency-rate4', 'potency-rate5', data1, data2, data3,
     //     data4, data5, 'num-span1', 'num-span2', 'num-span3', 'num-span4',
     //     'num-span5');
-    var dataName = [];
-    var data1 = [];
-    var data2 = [];
-    var data3 = [];
-    var data4 = [];
-    var data5 = [];
-    var nameone = [];
-    var nametwo = [];
-    var namethree = [];
-    var namefour = [];
-    var namefive = [];
+    var v1 = 0;
+    var v2 = 0;
+    var v3 = 0;
+    var v4 = 0;
+    var v5 = 0;
     $.each(json.data, function (i, item) {
       if (item.assessment === '高效') {
-        data1[0] = substringChar(item.proportion);
-        nameone[0] = item.assessment;
+        v1 = substringChar(item.proportion);
       }
       if (item.assessment === '勤奋') {
-        data2[0] = substringChar(item.proportion);
-        nametwo[0] = item.assessment;
+        v2 = substringChar(item.proportion);
       }
       if (item.assessment === '普通') {
-        data3[0] = substringChar(item.proportion);
-        namethree[0] = item.assessment;
+        v3 = substringChar(item.proportion);
       }
       if (item.assessment === '低效') {
-        data4[0] = substringChar(item.proportion);
-        namefour[0] = item.assessment;
+        v4 = substringChar(item.proportion);
       }
       if (item.assessment === '慵懒') {
-        data5[0] = substringChar(item.proportion);
-        namefive[0] = item.assessment;
+        v5 = substringChar(item.proportion);
       }
     });
-    changeColumar5('columar-area', dataName, data1, data2, data3, data4, data5,
-        nameone, nametwo, namethree, namefour, namefive);
+    changeHRing5(v1, v2, v3, v4, v5, '高效', '勤奋', '普通', '低效', '慵懒');
   }
   if (checkCodeEqualsOther(json)) {
     checkDivIfExist('scatter_point', 'r_scatter_point');
