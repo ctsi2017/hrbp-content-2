@@ -61,6 +61,63 @@ function h_ring(obj) {   //这是圆圈形状的图标
     echart.setOption(option);
     // $(".base-chara").css("display","flex");
 }
+/*
+* 工作效能象限图颜色
+* */
+function potency_ring(obj) {   //这是圆圈形状的图标
+    if (obj == undefined) {
+        obj = {};
+    }
+    var chart = document.getElementById(obj.idname || 'leave-ring');
+    var echart = echarts.init(chart);
+    var color = new Array;
+
+    option = {
+        tooltip: {
+            trigger: 'item',
+            formatter: "{a} <br/>{b} : {d}%"
+        },
+        series: [
+            {
+                name: '访问来源',
+                type: 'pie',
+                radius: ['20%', '55%'],
+                center: ['50%', '50%'],
+                color: ['#e66440', '#f2883b','#d7d7d7', '#68738c', '#3c424f'],
+                label: {
+                    normal: {
+                        position: 'outside',
+                        formatter: "{d}%",
+                        textStyle: {
+                            color: '#666',
+                            // fontWeight: 'bold',
+                            fontSize: 12
+                        }
+                    }
+                },
+                labelLine: {
+                    normal: {
+                        show: true,
+                        lineStyle:{
+                            type : 'dotted'
+                        },
+                        length : 8,
+                        length2 : 8
+
+                    }
+                },
+                data: obj.data || [
+                    {value: 335, name: '直接访问'},
+                    {value: 310, name: '邮件营销'},
+                    {value: 234, name: '联盟广告'},
+                    {value: 135, name: '视频广告'}
+                ]
+            }
+        ]
+    };
+    echart.setOption(option);
+    // $(".base-chara").css("display","flex");
+}
 
 /*
 用工规范三个页面使用的柱状图
