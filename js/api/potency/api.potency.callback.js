@@ -90,7 +90,7 @@ function cbEmpWorkEfficiencyPercentage(json) {
         v5 = substringChar(item.proportion);
       }
     });
-    changeHRing5(v1, v2, v3, v4, v5, '高效', '勤奋', '普通', '低效', '慵懒');
+    changeHRing6(v1, v2, v3, v4, v5, '高效', '勤奋', '普通', '低效', '慵懒');
   }
   if (checkCodeEqualsOther(json)) {
     checkDivIfExist('leave-ring-point', 'r_scatter_point');

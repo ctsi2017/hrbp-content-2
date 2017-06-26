@@ -356,7 +356,7 @@ function changeHRing4(v1, v2, v3, v4, name1, name2, name3, name4) {
  * @param name5
  */
 function changeHRing5(v1, v2, v3, v4, v5, name1, name2, name3, name4, name5) {
-    potency_ring({
+    h_ring({
     name: "h-ring",
     color: ['#e66440', '#f2883b', '#9aabd2', '#68738c', '#3c424f'],
     data: [
@@ -367,6 +367,34 @@ function changeHRing5(v1, v2, v3, v4, v5, name1, name2, name3, name4, name5) {
       {value: v5, name: name5}
     ]
   });
+}
+
+/**
+ * 饼状图-工作效能.
+ *
+ * @param v1 一线.
+ * @param v2 二线.
+ * @param v3 三线.
+ * @param v4 四线.
+ * @param v5 五线.
+ * @param name1
+ * @param name2
+ * @param name3
+ * @param name4
+ * @param name5
+ */
+function changeHRing6(v1, v2, v3, v4, v5, name1, name2, name3, name4, name5) {
+    potency_ring({
+        name: "h-ring",
+        color: ['#e66440', '#f2883b', '#9aabd2', '#68738c', '#3c424f'],
+        data: [
+            {value: v1, name: name1},
+            {value: v2, name: name2},
+            {value: v3, name: name3},
+            {value: v4, name: name4},
+            {value: v5, name: name5}
+        ]
+    });
 }
 
 /**
