@@ -55,7 +55,7 @@
   background-color: #3c424f;
 }
 .potency-whole .potency-round {
-  height: 4.58rem;
+  height: 4.2rem;
   box-sizing: border-box;
   padding-top: 0.2rem;
   margin-bottom: 0.2rem;
@@ -72,7 +72,6 @@
   color: #c4c4c4;
   font-size: 0.21rem;
   box-sizing: border-box;
-  padding-top: 0.18rem;
 }
 .potency-whole .potency-round .potency-block div {
   margin-top: 0.4rem;
