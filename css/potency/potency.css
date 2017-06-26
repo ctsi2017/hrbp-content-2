@@ -108,7 +108,9 @@
 .potency-whole .potency-explain {
   width: 6.5rem;
   margin: 0.15rem auto;
+  margin-top: 0.3rem;
 }
 .potency-whole .potency-explain p {
-  font-size: 0.27rem;
+  font-size: 0.26rem;
+  color: #666666;
 }
