@@ -39,13 +39,9 @@ function cbEmpWorkEfficiencyMap(json) {
   }
 }
 function cbEmpWorkEfficiencyPercentage(json) {
-
-  json =  {"code":200,"status":"success","message":"success","data":[{"assessment":"高效","proNum":"183","proportion":"24.9%"},{"assessment":"勤奋","proNum":"122","proportion":"16.6%"},{"assessment":"普通","proNum":"245","proportion":"33.33%"},{"assessment":"低效","proNum":"62","proportion":"8.44%"},{"assessment":"慵懒","proNum":"123","proportion":"16.73%"}],"time":"2017-06-26 14:46:38"}
-;
-
   json = JsonParse(json);
   if (checkCallBackJsonIsNotNull(json) && checkJsonDateIsNotNull(json.data)) {
-    removePoint('scatter_point', 'r_scatter_point');
+    removePoint('leave-ring-point', 'r_scatter_point');
     // var data1 = 0;
     // var data2 = 0;
     // var data3 = 0;
@@ -97,7 +93,7 @@ function cbEmpWorkEfficiencyPercentage(json) {
     changeHRing5(v1, v2, v3, v4, v5, '高效', '勤奋', '普通', '低效', '慵懒');
   }
   if (checkCodeEqualsOther(json)) {
-    checkDivIfExist('scatter_point', 'r_scatter_point');
+    checkDivIfExist('leave-ring-point', 'r_scatter_point');
   }
 }
 function cbQuadrantCoordinatePoint(json) {
