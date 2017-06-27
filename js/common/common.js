@@ -800,10 +800,11 @@ function quadrant(obj) {
 
 function h_region(data, obj, callback) {
     //进入页面加载时循环创建左侧点击二级分类
-    alert(data[0].region1);
 
     for (var i = 0; i < data.length; i++) {
         $("." + obj.leftDrop).append("<p>" + data[i].region2 + "</p>");
+        alert(data[i].region1);
+
     }
     var leftval = $("." + obj.leftDrop + " p").eq(0).html(); //代表左侧点击进入时的第一个值，也是左侧获取的值
     var rightval, //代表右侧获取的值
