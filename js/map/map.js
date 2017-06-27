@@ -115,6 +115,7 @@ function drop(data) { //这是获取点的函数 传递data数据进入后渲染
         });
         AMap.event.addListener(marker, 'click', function (e) {
             var position = marker.getPosition();
+            alert(position)
             var phone, post, coordin;
             for (var j = 0; j < data.length; j++) {
                 coordin = data[j].latitudeAndLongitud.split(",")[0].substring(0, 10) + "," + data[j].latitudeAndLongitud.split(",")[1].substring(0, 9);
@@ -124,8 +125,8 @@ function drop(data) { //这是获取点的函数 传递data数据进入后渲染
 
                 }
             }
-            alert(coordin+ "--"+position.lng + "," + position.lat);
-            alert(phone);
+            // alert(coordin+ "--"+position.lng + "," + position.lat);
+            // alert(phone);
             viewEmpDetailsCB(phone, post);
             $(".map-popframe").show();
             //此处点击弹出个人详情框，可在此发送请求取出数据
