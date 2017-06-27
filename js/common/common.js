@@ -18,6 +18,7 @@ function h_ring(obj) {   //这是圆圈形状的图标
     option = {
         tooltip: {
             trigger: 'item',
+            position: ['50%', '50%'],
             formatter: "{a} <br/>{b} : {d}%"
         },
         series: [
