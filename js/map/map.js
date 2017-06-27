@@ -115,7 +115,7 @@ function drop(data) { //这是获取点的函数 传递data数据进入后渲染
         });
         AMap.event.addListener(marker, 'click', function (e) {
             var position = marker.getPosition();
-            alert(e);
+            alert( e.target.getPosition());
             var phone, post, coordin;
             for (var j = 0; j < data.length; j++) {
                 coordin = data[j].latitudeAndLongitud.split(",")[0].substring(0, 10) + "," + data[j].latitudeAndLongitud.split(",")[1].substring(0, 9);
