@@ -2,7 +2,13 @@
  * Created by Administrator on 2017/4/27.
  */
 
-// leave 的js
+
+/**
+ * h_ring()函数   离职识别分析，离职去向分析 的圆饼
+ * obj.idname 表示使用这个图的ID  目前未用到，三个页面都只用默认的'leave-ring'ID
+ * color 是根据数据的数量判断饼状图的颜色顺序 离职识别分析四种，判断data的长度，离职去向分析为五个城市，以此判断
+ * obj.data 为整个圆饼图需要显示的数据
+ */
 function h_ring(obj) {   //这是圆圈形状的图标
     if (obj == undefined) {
         obj = {};
@@ -77,11 +83,15 @@ function potency_ring(obj) {   //这是圆圈形状的图标
     var chart = document.getElementById(obj.idname || 'leave-ring');
     var echart = echarts.init(chart);
     var color = new Array;
-
     option = {
         tooltip: {
             trigger: 'item',
-            position: ['50%', '50%'],
+            position: function (pos, params, dom, rect, size) {
+                // 鼠标在左侧时 tooltip 显示到右侧，鼠标在右侧时 tooltip 显示到左侧。
+                var obj = {top: 60};
+                obj[['left', 'right'][+(pos[0] < size.viewSize[0] / 2)]] = 5;
+                return obj;
+            },
             formatter: "{a} <br/>{b} : {d}%"
         },
         series: [

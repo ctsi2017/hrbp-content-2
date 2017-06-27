@@ -125,7 +125,7 @@ function drop(data) { //这是获取点的函数 传递data数据进入后渲染
 
                 }
             }
-
+            alert(phone, post);
             viewEmpDetailsCB(phone, post);
             $(".map-popframe").show();
             //此处点击弹出个人详情框，可在此发送请求取出数据
