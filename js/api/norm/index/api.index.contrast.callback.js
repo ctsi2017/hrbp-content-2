@@ -19,7 +19,7 @@ function cbEmpStandardContrast(json) {
         });
         nameone = d.name;
       }
-      if (d.name === '提醒') {
+      if (d.name === '预警') {
         $.each(d.value, function (l, d2) {
           data2[l] = d2;
         });
