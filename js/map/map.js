@@ -115,15 +115,30 @@ function drop(data) { //这是获取点的函数 传递data数据进入后渲染
         });
         AMap.event.addListener(marker, 'click', function (e) {
             var position = e.target.getPosition();
-            var phone, post, coordin;
+            var positionLeft = position.lng;
+            var positionRight = position.lat;
+            var phone, post, coordin,coordinLeft,coordinLeftAdd,coordinLeftPlus,coordinRight,coordinRightAdd,coordinRightPlus;
             for (var j = 0; j < data.length; j++) {
                 // coordin = data[j].latitudeAndLongitud.split(",")[0].substring(0, 10) + "," + data[j].latitudeAndLongitud.split(",")[1].substring(0, 9);
                 coordin = Number(data[j].latitudeAndLongitud.split(",")[0]).toFixed(6) + "," + Number(data[j].latitudeAndLongitud.split(",")[1]).toFixed(6);
+                coordinLeft = Number(data[j].latitudeAndLongitud.split(",")[0]).toFixed(6);
+                coordinLeftAdd = coordinLeft + 0.000001;
+                coordinLeftPlus = coordinLeft - 0.000001;
+                coordinRight = Number(data[j].latitudeAndLongitud.split(",")[1]).toFixed(6);
+                coordinRightAdd = coordinRight + 0.000001;
+                coordinRightPlus = coordinRight - 0.000001;
 
-                if (coordin == position) {
+                if ((positionLeft == coordinLeft || positionLeft == coordinRightAdd || positionLeft == coordinLeftPlus) &&
+                    (positionRight == coordinRight || positionRight == coordinRightAdd || positionRight == coordinRightPlus))
+                {
                     phone = data[j].phoneNum;
                     post = data[j].postName;
+
                 }
+                // if (coordin == position) {
+                //     phone = data[j].phoneNum;
+                //     post = data[j].postName;
+                // }
             }
             // alert(position+ "--"+position.lng + "," + position.lat);
             // alert(phone);
