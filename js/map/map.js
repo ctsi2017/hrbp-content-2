@@ -117,14 +117,14 @@ function drop(data) { //这是获取点的函数 传递data数据进入后渲染
             var position = e.target.getPosition();
             var positionLeft = position.lng;
             var positionRight = position.lat;
-            var phone, post, coordin;
+            var phone, post, coordin,coordinLeft,coordinRight;
             for (var j = 0; j < data.length; j++) {
                 coordin = data[j].latitudeAndLongitud.split(",")[0].substring(0, 10) + "," + data[j].latitudeAndLongitud.split(",")[1].substring(0, 9);
                 coordinLeft = data[j].latitudeAndLongitud.split(",")[0].substring(0, 11);
                 coordinRight = data[j].latitudeAndLongitud.split(",")[1].substring(0, 11);
                 if (isContains(coordinLeft, positionLeft) && isContains(coordinRight,positionRight)){
                     phone = data[j].phoneNum;
-                        post = data[j].postName;
+                    post = data[j].postName;
                 }
                 // if (coordin == position) {
                 //     phone = data[j].phoneNum;
