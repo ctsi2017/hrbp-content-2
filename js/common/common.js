@@ -800,6 +800,8 @@ function quadrant(obj) {
 
 function h_region(data, obj, callback) {
     //进入页面加载时循环创建左侧点击二级分类
+    alert(data[0].region1);
+
     for (var i = 0; i < data.length; i++) {
         $("." + obj.leftDrop).append("<p>" + data[i].region2 + "</p>");
     }
@@ -866,7 +868,6 @@ function h_region(data, obj, callback) {
         if(rightval == "全部"){
             if(leftval == "全部"){
                 $("#region").html(data[0].region1);
-                alert(data[0].region1);
             }else {
                 $("#region").html(leftval);
 
