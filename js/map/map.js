@@ -87,7 +87,7 @@ function generateImg(data) {
     var groundImage = new AMap.GroundImage('data:image/png;base64,' + data, bounds, groundImageOpts);
 }
 function drop(data) { //这是获取点的函数 传递data数据进入后渲染点
-    alert(Number(data[i].latitudeAndLongitud.split(",")[0]).toFixed(6));
+    alert(Number(data[1].latitudeAndLongitud.split(",")[0]).toFixed(6));
     for (var i = 0; i < data.length; i++) {
         marker = new AMap.Marker({
             position: (Number(data[i].latitudeAndLongitud.split(",")[0]).toFixed(6) + "," + Number(data[i].latitudeAndLongitud.split(",")[1]).toFixed(6)).split(","),
