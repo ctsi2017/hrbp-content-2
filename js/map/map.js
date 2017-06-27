@@ -125,7 +125,7 @@ function drop(data) { //这是获取点的函数 传递data数据进入后渲染
 
                 }
             }
-            alert(coordin+ "--"+position.lng + "," + position.lat);
+            alert(position+ "--"+position.lng + "," + position.lat);
             // alert(phone);
             viewEmpDetailsCB(phone, post);
             $(".map-popframe").show();
