@@ -1109,7 +1109,7 @@ function postDuaration() {
         $(".post-timeShow").stop().fadeToggle();
         $(".post-closetime").stop().fadeToggle();
         $(".post-posttime .icon-xiala").toggleClass("icon-shangla");
-        $("#post_abnormal_ranking").html(" "+txt);
+        $("#post_abnormal_ranking").html(txt);
         var sendText = $.trim(txt);
         if(sendText == "0 小时"){
             sendText = "0小时";
