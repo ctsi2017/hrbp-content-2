@@ -119,13 +119,13 @@ function drop(data) { //这是获取点的函数 传递data数据进入后渲染
             var phone, post, coordin;
             for (var j = 0; j < data.length; j++) {
                 coordin = data[j].latitudeAndLongitud.split(",")[0].substring(0, 10) + "," + data[j].latitudeAndLongitud.split(",")[1].substring(0, 9);
-                if (coordin == position.lng + "," + position.lat) {
+                if (coordin == position) {
                     phone = data[j].phoneNum;
                     post = data[j].postName;
 
                 }
             }
-            alert(position+ "--"+position.lng + "," + position.lat);
+            // alert(position+ "--"+position.lng + "," + position.lat);
             // alert(phone);
             viewEmpDetailsCB(phone, post);
             $(".map-popframe").show();
