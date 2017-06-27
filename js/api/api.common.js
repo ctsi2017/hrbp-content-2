@@ -430,6 +430,7 @@ function getRegionArrayByString(data) {
   var rArr = [];
   $.each(data, function (i, item) {
     var obj = {};
+    obj.region1 = item.region1;
     obj.region2 = item.region2;
     obj.region3 = item.region3;
     rArr[i] = obj;

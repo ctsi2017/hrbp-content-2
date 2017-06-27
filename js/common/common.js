@@ -803,8 +803,6 @@ function h_region(data, obj, callback) {
 
     for (var i = 0; i < data.length; i++) {
         $("." + obj.leftDrop).append("<p>" + data[i].region2 + "</p>");
-        alert(data[i].region1);
-
     }
     var leftval = $("." + obj.leftDrop + " p").eq(0).html(); //代表左侧点击进入时的第一个值，也是左侧获取的值
     var rightval, //代表右侧获取的值
@@ -868,6 +866,7 @@ function h_region(data, obj, callback) {
         rightval = $("." + obj.rightDrop + " p").eq(index).html();
         if(rightval == "全部"){
             if(leftval == "全部"){
+                alert(data[0].region1)
                 $("#region").html(data[0].region1);
             }else {
                 $("#region").html(leftval);
