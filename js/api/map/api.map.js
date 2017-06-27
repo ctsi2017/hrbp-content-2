@@ -14,7 +14,7 @@ function empInPostSummary() {
     currentPage = 1;
     var obj = getArea();
     // obj.post = CTSI_API_JSON.baseInfo.postName;
-    obj.date = CTSI_API_JSON.time; // 20170525
+    obj.date = '20170531';//CTSI_API_JSON.time; // 20170525
     obj.post = '所有岗位';// 2017-5-25 18:04:28，领导让写死
     api('/panoramaView/empInPostSummary', 3001, 'cbEmpInPostSummary', JSON.stringify(obj));
 }
@@ -43,7 +43,7 @@ function postInfoOverview() {
  */
 function empInPostAbnormalCauseAnalysis() {
     var obj = getArea();
-    obj.date = CTSI_API_JSON.time;
+    obj.date = '20170531';//CTSI_API_JSON.time;
     api('/panoramaView/empInPostAbnormalCauseAnalysis', 3001, 'cbEmpInPostAbnormalCauseAnalysis', JSON.stringify(obj));
 }
 
@@ -54,7 +54,7 @@ function viewEmpDetailsCB(phone, post) {
     var obj = {};
     obj.phoneNum = phone;
     obj.post = post;
-    obj.date = CTSI_API_JSON.time;
+    obj.date = '20170531';//CTSI_API_JSON.time;
     api('/panoramaView/viewEmpDetails', 3001, 'cbViewEmpDetails', JSON.stringify(obj));
 }
 
@@ -66,7 +66,7 @@ function taskPerformanceRanking() {
     var obj = getArea();
     // obj.post = CTSI_API_JSON.baseInfo.postName;
     obj.post = '所有岗位';// 2017-5-25 18:04:28，领导让写死
-    obj.date = CTSI_API_JSON.months[0].replace('.', '');
+    obj.date = '201705';//CTSI_API_JSON.months[0].replace('.', '');
     api('/panoramaView/taskPerformanceRanking', 3001, 'cbTaskPerformanceRanking', JSON.stringify(obj));
 }
 
@@ -75,7 +75,7 @@ function taskPerformanceRanking() {
  */
 function postInfoOverviewPng(widthHeight, level, latLng) {
     var obj = getArea();
-    obj.date = CTSI_API_JSON.time;
+    obj.date = '20170531';//CTSI_API_JSON.time;
     obj.widthHeight = widthHeight;
     obj.level = level;
     obj.latLng = latLng;
