@@ -866,6 +866,7 @@ function h_region(data, obj, callback) {
         if(rightval == "全部"){
             if(leftval == "全部"){
                 $("#region").html(data[0].region1);
+                alert(data[0].region1);
             }else {
                 $("#region").html(leftval);
 
