@@ -115,15 +115,22 @@ function drop(data) { //这是获取点的函数 传递data数据进入后渲染
         });
         AMap.event.addListener(marker, 'click', function (e) {
             var position = e.target.getPosition();
-
+            var positionLeft = position.lng;
+            var positionRight = position.lat;
             var phone, post, coordin;
             for (var j = 0; j < data.length; j++) {
                 coordin = data[j].latitudeAndLongitud.split(",")[0].substring(0, 10) + "," + data[j].latitudeAndLongitud.split(",")[1].substring(0, 9);
-                if (coordin == position) {
+                coordinLeft = data[j].latitudeAndLongitud.split(",")[0].substring(0, 11);
+                coordinRight = data[j].latitudeAndLongitud.split(",")[1].substring(0, 11);
+                if (isContains(coordinLeft, positionLeft) && isContains(coordinRight,positionRight)){
                     phone = data[j].phoneNum;
-                    post = data[j].postName;
-
+                        post = data[j].postName;
                 }
+                // if (coordin == position) {
+                //     phone = data[j].phoneNum;
+                //     post = data[j].postName;
+                //
+                // }
             }
             // alert(position+ "--"+position.lng + "," + position.lat);
             // alert(phone);
@@ -134,6 +141,9 @@ function drop(data) { //这是获取点的函数 传递data数据进入后渲染
         markers.push(marker);
     }
     // map.setFitView();
+}
+function isContains(str, substr) {
+    return str.indexOf(substr) >= 0;
 }
 function getCoordinate(map) { //这是获取四个方位坐标点的函数
     var bounds = map.getBounds();
