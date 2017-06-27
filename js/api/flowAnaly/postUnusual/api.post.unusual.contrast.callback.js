@@ -17,7 +17,7 @@ function cbPostAbnormalContrast(json) {
         });
         nameOne = d.name;
       }
-      if (d.name === '正常') {
+      if (d.name === '在岗') {
         $.each(d.value, function (l, d2) {
           rightData[l] = d2;
         });
