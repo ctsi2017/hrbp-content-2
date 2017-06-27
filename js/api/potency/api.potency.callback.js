@@ -76,18 +76,23 @@ function cbEmpWorkEfficiencyPercentage(json) {
     $.each(json.data, function (i, item) {
       if (item.assessment === '高效') {
         v1 = substringChar(item.proportion);
+        $("#potency-highly").html(item.proNum);
       }
       if (item.assessment === '勤奋') {
         v2 = substringChar(item.proportion);
+          $("#potency-diligent").html(item.proNum);
       }
       if (item.assessment === '普通') {
         v3 = substringChar(item.proportion);
+          $("#potency-common").html(item.proNum);
       }
       if (item.assessment === '低效') {
         v4 = substringChar(item.proportion);
+          $("#potency-ineffic").html(item.proNum);
       }
       if (item.assessment === '慵懒') {
         v5 = substringChar(item.proportion);
+          $("#potency-indolent").html(item.proNum);
       }
     });
     changeHRing6(v1, v2, v3, v4, v5, '高效', '勤奋', '普通', '低效', '慵懒');
