@@ -66,7 +66,7 @@ function cbViewEmpDetails(json) {
     $.each(json.data, function (i, item) {
       $('#detail_postName').html(item.postName);// 岗位
       $('#detail_cumulativeWorkDate').html(item.abnormalDate + '小时');// 累计工作时长
-      $('#detail_onTheJobRate').html(item.onTheJobRate + '%');// 在岗率
+      $('#detail_onTheJobRate').html( Math.floor(item.onTheJobRate *100) + '%');// 在岗率
       $('#detail_region').html(item.area); // 负责区域
     });
   }

@@ -95,13 +95,13 @@ function drop(data) { //这是获取点的函数 传递data数据进入后渲染
             map: map,
             icon: new AMap.Icon({
                 image: function () {
-                    if (data[i].postName === "渠道人员" && data[i].isAbnormal === "是") {
+                    if (data[i].postName === "渠道人员" && data[i].isAbnormal === "否") {
                         return "../../img/qudaoiconblue.png"
-                    } else if (data[i].postName === "渠道人员" && data[i].isAbnormal === "否") {
+                    } else if (data[i].postName === "渠道人员" && data[i].isAbnormal === "是") {
                         return "../../img/qudaoicon.png"
-                    } else if (data[i].postName === "装维经理" && data[i].isAbnormal === "是") {
-                        return "../../img/zhuangwei.png"
                     } else if (data[i].postName === "装维经理" && data[i].isAbnormal === "否") {
+                        return "../../img/zhuangwei.png"
+                    } else if (data[i].postName === "装维经理" && data[i].isAbnormal === "是") {
                         return "../../img/zhuangweired.png"
                     } else {
                         return "../../img/zhuangweired.png"
