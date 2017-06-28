@@ -102,8 +102,12 @@ function cbEmpWorkEfficiencyPercentage(json) {
         total += Number(item.proNum);
       }
     });
-    $("#potency-date").html(apiReq.date);
-    $("#potency-area").html(getPermissionAreaByUserMaxPermission());
+    // 头部值
+    var date = $('#month').html().split('.');
+    $("#potency-date").html(date[0] + '年' + date[1] + '月');
+    $("#potency-area").html($('#region').html());
+    $("#potency-post").html($('#post').html());
+    //
     $("#potency-total").html(total);
 
     changeHRing6(v1, v2, v3, v4, v5, '高效', '勤奋', '普通', '低效', '慵懒');
