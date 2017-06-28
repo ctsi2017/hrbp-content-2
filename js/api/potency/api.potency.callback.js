@@ -68,33 +68,44 @@ function cbEmpWorkEfficiencyPercentage(json) {
     //     'potency-rate3', 'potency-rate4', 'potency-rate5', data1, data2, data3,
     //     data4, data5, 'num-span1', 'num-span2', 'num-span3', 'num-span4',
     //     'num-span5');
+
     var v1 = 0;
     var v2 = 0;
     var v3 = 0;
     var v4 = 0;
     var v5 = 0;
+    var total = Number(0);
     $.each(json.data, function (i, item) {
       if (item.assessment === '高效') {
         v1 = substringChar(item.proportion);
         $("#potency-highly").html(item.proNum);
+        total += Number(item.proNum);
       }
       if (item.assessment === '勤奋') {
         v2 = substringChar(item.proportion);
-          $("#potency-diligent").html(item.proNum);
+        $("#potency-diligent").html(item.proNum);
+        total += Number(item.proNum);
       }
       if (item.assessment === '普通') {
         v3 = substringChar(item.proportion);
-          $("#potency-common").html(item.proNum);
+        $("#potency-common").html(item.proNum);
+        total += Number(item.proNum);
       }
       if (item.assessment === '低效') {
         v4 = substringChar(item.proportion);
-          $("#potency-ineffic").html(item.proNum);
+        $("#potency-ineffic").html(item.proNum);
+        total += Number(item.proNum);
       }
       if (item.assessment === '慵懒') {
         v5 = substringChar(item.proportion);
-          $("#potency-indolent").html(item.proNum);
+        $("#potency-indolent").html(item.proNum);
+        total += Number(item.proNum);
       }
     });
+    $("#potency-date").html(apiReq.date);
+    $("#potency-area").html(getPermissionAreaByUserMaxPermission());
+    $("#potency-total").html(total);
+
     changeHRing6(v1, v2, v3, v4, v5, '高效', '勤奋', '普通', '低效', '慵懒');
   }
   if (checkCodeEqualsOther(json)) {
