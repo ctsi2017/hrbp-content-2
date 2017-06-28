@@ -103,10 +103,10 @@ function cbEmpWorkEfficiencyPercentage(json) {
       }
     });
     // 头部值
-    var date = $('#month').html().split('.');
-    $("#potency-date").html(date[0] + '年' + date[1] + '月');
-    $("#potency-area").html($('#region').html());
-    $("#potency-post").html($('#post').html());
+    // var date = $('#month').html().split('.');
+    // $("#potency-date").html(date[0] + '年' + date[1] + '月');
+    // $("#potency-area").html($('#region').html());
+    // $("#potency-post").html($('#post').html());
     //
     $("#potency-total").html(total);
 
