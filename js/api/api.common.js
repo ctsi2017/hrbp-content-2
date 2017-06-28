@@ -1,6 +1,8 @@
 // API系列
-var projectDomain = 'http://36.111.132.126:8095/bigdata-hrbp-service';
+// var projectDomain = 'http://36.111.132.126:8095/bigdata-hrbp-service';
 // var projectDomain = 'https://42.123.106.20:8081/bigdata-hrbp-service';
+var projectDomain = 'http://36.111.132.98:8081/bigdata-hrbp-service';
+
 
 // 格式化系列
 var DATE_YYYYMMDD = 'yyyyMMdd';
