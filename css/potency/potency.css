@@ -12,10 +12,13 @@
   color: #343a46;
 }
 .potency-whole .potency-round {
-  height: 4.2rem;
+  height: 5.4rem;
   box-sizing: border-box;
   padding-top: 0.2rem;
   margin-bottom: 0.2rem;
+}
+.potency-whole .potency-round .potency-Heightfixed {
+  height: 4.2rem;
 }
 .potency-whole .potency-round #leave-ring {
   width: 4.95rem;
