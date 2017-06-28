@@ -71,6 +71,7 @@
 .potency-whole .potency-round .potency-countExplain p {
   color: #737373;
   line-height: 0.45rem;
+  font-size: 0.26rem;
 }
 .potency-whole .potency-round .potency-countExplain p s {
   color: #df5e39;
