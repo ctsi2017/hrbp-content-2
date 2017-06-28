@@ -58,6 +58,20 @@
 .potency-whole .potency-round .potency-block .potency-block5 span {
   background-color: #3c424f;
 }
+.potency-whole .potency-round .potency-countExplain {
+  width: 6.5rem;
+  margin: 0 auto;
+  padding-top: 0.05rem;
+  padding-bottom: 0.1rem;
+  font-size: 0.26rem;
+}
+.potency-whole .potency-round .potency-countExplain p {
+  color: #737373;
+  line-height: 0.45rem;
+}
+.potency-whole .potency-round .potency-countExplain p s {
+  color: #df5e39;
+}
 .potency-whole .potency-explain {
   width: 6.5rem;
   margin: 0.15rem auto;
@@ -66,18 +80,4 @@
 .potency-whole .potency-explain p {
   font-size: 0.26rem;
   color: #666666;
-}
-.potency-countExplain {
-  width: 6.5rem;
-  margin: 0 auto;
-  padding-top: 0.2rem;
-  padding-bottom: 0.1rem;
-  font-size: 0.26rem;
-}
-.potency-countExplain p {
-  color: #737373;
-  line-height: 0.45rem;
-}
-.potency-countExplain p s {
-  color: #df5e39;
 }
