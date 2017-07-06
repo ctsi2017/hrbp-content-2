@@ -4,7 +4,7 @@ var warningValueNum = 0;
 function normApi(json) {
   CTSI_API_JSON = JsonParse(json);
   apiReq = getArea();
-  apiReq.date = CTSI_API_JSON.months[0].replace('.', '');
+  apiReq.date = '201705';// CTSI_API_JSON.months[0].replace('.', ''); //  2017-7-6 (星期四) 9:40李哲邮件让写死
   warningValue();
 }
 

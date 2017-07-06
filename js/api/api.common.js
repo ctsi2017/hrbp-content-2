@@ -1,7 +1,7 @@
 // API系列
-var projectDomain = 'http://36.111.132.126:8095/bigdata-hrbp-service'; //测试环境
+// var projectDomain = 'http://36.111.132.126:8095/bigdata-hrbp-service'; //测试环境
 // var projectDomain = 'https://42.123.106.20:8081/bigdata-hrbp-service';
-// var projectDomain = 'http://hrbp.ctyun.cn:8081/bigdata-hrbp-service'; //正式环境
+var projectDomain = 'http://hrbp.ctyun.cn:8081/bigdata-hrbp-service'; //正式环境
 
 
 // 格式化系列
