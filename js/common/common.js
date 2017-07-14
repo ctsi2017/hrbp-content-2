@@ -192,9 +192,6 @@ function h_columar(obj) { //这是长方形柱状图
             "splitArea": {
                 "show": false
             },
-            "axisLabel":{
-                interval: 0
-            },
             data: obj.dataname || ['装维', '装维', '装维', '装维', '装维'],
             axisLabel: {
                 formatter: function(value, index) {
@@ -204,7 +201,8 @@ function h_columar(obj) { //这是长方形柱状图
                 textStyle: {
                     fontFamily: "微软雅黑",
                     fontSize: 12,
-                }
+                },
+                interval: 0
             }
 
 
@@ -324,9 +322,7 @@ function early_columar(obj) { //这是长方形柱状图
             "splitArea": {
                 "show": false
             },
-            "axisLabel": {
-                interval: 0
-            },
+
             data: obj.dataname || ['装维', '装维', '装维', '装维', '装维'],
             axisLabel: {
                 formatter: function(value, index) {
@@ -336,7 +332,8 @@ function early_columar(obj) { //这是长方形柱状图
                 textStyle: {
                     fontFamily: "微软雅黑",
                     fontSize: 12,
-                }
+                },
+                interval: 0
             }
         }],
         yAxis: [{
