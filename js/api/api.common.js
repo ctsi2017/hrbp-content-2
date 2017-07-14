@@ -560,6 +560,8 @@ function getHead(json, callBack, needDay) {
   $('#post').html(json.postList[0]);
   $('#month').html(json.months[0]);
   setItem("getDate", json.months[0]);
+  setItem("getArea", getPermissionAreaByUserMaxPermission());
+  setItem("getPost", json.postList[0]);
   // 三个多级选择
   changeHRegionArea(json.regionalScope, callBack);
   changeHRegionPost(json.postList, callBack);
