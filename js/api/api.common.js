@@ -560,11 +560,12 @@ function getHead(json, callBack, needDay) {
   $('#post').html(json.postList[0]);
   $('#month').html(json.months[0]);
   setItem("getDate", json.months[0]);
-  setItem("getArea", getPermissionAreaByUserMaxPermission());
-  setItem("getPost", json.postList[0]);
   // 三个多级选择
   changeHRegionArea(json.regionalScope, callBack);
+  setItem("getArea", json.regionalScope[0].region2);
+  setItem("getArea1", json.regionalScope[0].region3[0]);
   changeHRegionPost(json.postList, callBack);
+  setItem("getPost", json.postList[0]);
   // changeMonths(json.months, callBack);
   changeMonths(needDay);
 }
