@@ -261,23 +261,6 @@ function h_columar(obj) { //这是长方形柱状图
                 barWidth: 14,
                 barGap: '-100%',
                 "data": [100,100,100,100,100]
-
-            },
-            {
-                name: '预警值',
-                type: "line",
-                // xAxisIndex : 1,
-                itemStyle: {
-                    normal: {
-                        opacity: 0
-                    }
-                },
-                lineStyle: {
-                    normal: {
-                        type: 'detail'
-                    }
-                },
-                data: obj.earlyLine
             }]
     };
 
